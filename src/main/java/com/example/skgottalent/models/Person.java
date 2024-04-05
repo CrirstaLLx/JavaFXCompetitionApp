@@ -1,4 +1,4 @@
-package com.example.skgottalent;
+package com.example.skgottalent.models;
 
 public class Person {
     protected String name;

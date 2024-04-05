@@ -1,6 +1,7 @@
-package com.example.skgottalent;
+package com.example.skgottalent.controllers;
 
-import javafx.beans.Observable;
+import com.example.skgottalent.models.Judge;
+import com.example.skgottalent.models.Participant;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -59,7 +60,7 @@ public class MainWindowController implements Initializable {
 
     private void openMemberView(String memberType) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("person-view.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/skgottalent/person-view.fxml"));
             Parent root = loader.load();
 
             PersonViewController controller = loader.getController();

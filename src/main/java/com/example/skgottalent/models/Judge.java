@@ -1,4 +1,4 @@
-package com.example.skgottalent;
+package com.example.skgottalent.models;
 
 public class Judge extends Person {
     private String specialization;

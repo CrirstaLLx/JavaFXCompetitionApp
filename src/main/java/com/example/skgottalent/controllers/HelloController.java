@@ -1,4 +1,4 @@
-package com.example.skgottalent;
+package com.example.skgottalent.controllers;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -18,7 +18,7 @@ public class HelloController {
     protected void onHelloButtonClick() {
         try {
             Stage stage = (Stage) welcomeText.getScene().getWindow();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("main-view.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/skgottalent/main-view.fxml"));
             Parent root = fxmlLoader.load();
             stage.setScene(new Scene(root));
             stage.setTitle("New window");

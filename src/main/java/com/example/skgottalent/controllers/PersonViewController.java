@@ -1,6 +1,7 @@
-package com.example.skgottalent;
+package com.example.skgottalent.controllers;
 
-import javafx.application.Application;
+import com.example.skgottalent.models.Judge;
+import com.example.skgottalent.models.Participant;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
