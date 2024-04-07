@@ -8,6 +8,8 @@ public class Participant extends Person {
         this.talentType = talentType;
     }
 
+    public Participant() {}
+
     public String getTalentType() {
         return talentType;
     }

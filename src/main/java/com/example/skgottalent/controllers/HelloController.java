@@ -21,7 +21,7 @@ public class HelloController {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/skgottalent/main-view.fxml"));
             Parent root = fxmlLoader.load();
             stage.setScene(new Scene(root));
-            stage.setTitle("New window");
+            stage.setTitle("Slovakia Got Talent!");
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();

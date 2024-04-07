@@ -15,17 +15,17 @@
             <Font name="System Bold" size="26.0" />
          </font>
       </Label>
-      <Button onAction="#onAddJudgeClick" layoutX="121.0" layoutY="120.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="151.0" text="Add Jury">
+      <Button layoutX="121.0" layoutY="120.0" mnemonicParsing="false" onAction="#onAddJudgeClick" prefHeight="35.0" prefWidth="151.0" text="Add Jury">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
-      <Button onAction="#onAddParticipantClick" layoutX="121.0" layoutY="162.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="151.0" text="Add members">
+      <Button layoutX="121.0" layoutY="162.0" mnemonicParsing="false" onAction="#onAddParticipantClick" prefHeight="35.0" prefWidth="151.0" text="Add members">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
-      <Label layoutX="183.0" layoutY="278.0" text="Participants">
+      <Label layoutX="153.0" layoutY="279.0" text="Participants">
          <font>
             <Font size="17.0" />
          </font>
@@ -33,13 +33,13 @@
       <Separator layoutX="53.0" layoutY="90.0" prefHeight="12.0" prefWidth="290.0" />
       <Separator layoutX="53.0" layoutY="260.0" prefHeight="12.0" prefWidth="290.0" />
       <ListView fx:id="participantListView" layoutX="53.0" layoutY="316.0" prefHeight="200.0" prefWidth="290.0" />
-      <Label layoutX="161.0" layoutY="540.0" text="Judges">
+      <Label layoutX="171.0" layoutY="540.0" text="Judges">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
       <ListView fx:id="judgeListView" layoutX="52.0" layoutY="579.0" prefHeight="200.0" prefWidth="290.0" />
-      <Button layoutX="121.0" layoutY="205.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="151.0" text="Start Game">
+      <Button layoutX="121.0" layoutY="205.0" mnemonicParsing="false" onAction="#onStartGameClick" prefHeight="35.0" prefWidth="151.0" text="Start Game">
          <font>
             <Font size="16.0" />
          </font>

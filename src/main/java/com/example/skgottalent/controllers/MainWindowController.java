@@ -9,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
@@ -73,6 +74,27 @@ public class MainWindowController implements Initializable {
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+    @FXML
+    protected void onStartGameClick() {
+        if (participantsList.isEmpty() || judgesList.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText("Participant or judge list is empty. Please add participants and judges before starting the game.");
+            alert.showAndWait();
+        } else {
+            try {
+                Stage stage = (Stage) mainWindowLabel.getScene().getWindow();
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/skgottalent/competition-view.fxml"));
+                Parent root = fxmlLoader.load();
+                stage.setScene(new Scene(root));
+                stage.setTitle("Slovakia Got Talent!");
+                stage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
