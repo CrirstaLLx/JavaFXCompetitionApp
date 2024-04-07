@@ -9,12 +9,32 @@ import java.util.List;
 public class Competition {
     private List<Participant> participants;
     private List<Judge> judges;
+    private List<Participant> nextRoundParticipants;
     private CompetitionStage currentStage;
 
     public Competition(List<Judge> judges) {
         this.judges = judges;
         participants = new ArrayList<>();
+        this.nextRoundParticipants = new ArrayList<>();
         currentStage = CompetitionStage.CASTING;
+    }
+
+    private String formatParticipantForTable(Participant participant) {
+        return participant.getName() + " | " + participant.getAge() + " | " + participant.getTalentType() + " | " + participant.getAverageScore();
+    }
+
+    public void determineNextRoundParticipants() {
+        double totalScore = 0;
+        for (Participant participant : participants) {
+            totalScore += participant.getAverageScore();
+        }
+        double minThreshold = totalScore / participants.size();
+
+        for (Participant participant : participants) {
+            if (participant.getAverageScore() > minThreshold) {
+                nextRoundParticipants.add(participant);
+            }
+        }
     }
 
     public void addParticipant(Participant participant) {
