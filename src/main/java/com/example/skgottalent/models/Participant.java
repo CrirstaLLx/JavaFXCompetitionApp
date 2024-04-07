@@ -2,6 +2,7 @@ package com.example.skgottalent.models;
 
 public class Participant extends Person {
     private String talentType;
+    private double averageScore;
 
     public Participant(String name, int age, String talentType) {
         super(name, age);
@@ -17,6 +18,10 @@ public class Participant extends Person {
     public void setTalentType(String talentType) {
         this.talentType = talentType;
     }
+
+    public double getAverageScore() { return  averageScore; }
+
+    public void setAverageScore(double averageScore) { this.averageScore = averageScore; }
 
     @Override
     public String toString() {
