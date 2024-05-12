@@ -1,6 +1,7 @@
 module com.example.skgottalent {
     requires javafx.controls;
     requires javafx.fxml;
+    requires org.aspectj.runtime;
 
 
     opens com.example.skgottalent to javafx.fxml;

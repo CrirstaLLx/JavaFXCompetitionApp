@@ -1,3 +1,7 @@
+/**
+ * The HelloController class controls the behavior of the "Hello" view in the Slovakia Got Talent application.
+ * It handles actions such as button clicks to navigate to the main view or close the application.
+ */
 package com.example.skgottalent.controllers;
 
 import javafx.application.Platform;
@@ -11,9 +15,15 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class HelloController {
+
+    /** The label displaying the welcome text. */
     @FXML
     private Label welcomeText;
 
+    /**
+     * Handles the action when the "Hello" button is clicked.
+     * Loads the main view and sets it as the scene for the stage.
+     */
     @FXML
     protected void onHelloButtonClick() {
         try {
@@ -28,6 +38,10 @@ public class HelloController {
         }
     }
 
+    /**
+     * Handles the action when the "Close" button is clicked.
+     * Exits the application.
+     */
     @FXML
     protected void onCloseButtonClick() {
         Platform.exit();
